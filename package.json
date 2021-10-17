@@ -1,0 +1,40 @@
+{
+  "name": "merkledistributor1155",
+  "version": "1.0.0",
+  "description": "merkle distributor for erc1155 tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xthrpw/MerkleDistributor1155.git"
+  },
+  "keywords": [
+    "ethereum",
+    "nft",
+    "erc1155",
+    "merkle-tree"
+  ],
+  "author": "0xthrpw",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/0xthrpw/MerkleDistributor1155/issues"
+  },
+  "homepage": "https://github.com/0xthrpw/MerkleDistributor1155#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^3.4.0",
+    "chai": "^4.3.3",
+    "dotenv": "^8.2.0",
+    "eth-rpc-errors": "^4.0.3",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.31",
+    "hardhat": "^2.1.1",
+    "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-interface-generator": "0.0.6",
+    "solidity-coverage": "^0.7.16"
+  }
+}
