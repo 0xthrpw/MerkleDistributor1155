@@ -60,7 +60,7 @@ contract MerkleDistributor1155 is IMerkleDistributor, Ownable {
         _setClaimed(  groupId, index );
 
         uint256 newTokenIdBase = groupId << 128;
-        uint256 currentMintCount = ISuper1155( token ).mintCount(groupId);
+        uint256 currentMintCount = ISuper1155( token ).groupMintCount(groupId);
 
         uint256[] memory ids = new uint256[](amount);
         uint256[] memory amounts = new uint[](amount);

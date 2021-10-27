@@ -335,7 +335,7 @@ contract Super1155 is PermitControl, ERC165, IERC1155, IERC1155MetadataURI {
     @param _proxyRegistryAddress The address of a proxy registry contract.
   */
   constructor(address _owner, string memory _name, string memory _uri,
-    address _proxyRegistryAddress) public {
+    address _proxyRegistryAddress) {
 
     // Register the ERC-165 interfaces.
     _registerInterface(INTERFACE_ERC1155);
@@ -468,6 +468,16 @@ contract Super1155 is PermitControl, ERC165, IERC1155, IERC1155MetadataURI {
       "ERC1155: setting approval status for self");
     operatorApprovals[_msgSender()][_operator] = _approved;
     emit ApprovalForAll(_msgSender(), _operator, _approved);
+  }
+
+  /**
+    A low overhead helper function that specifically retrieves a groups current
+    mint count from its itemGroup data
+
+    @param _groupId The id of the group data being returned
+  */
+  function groupMintCount(uint256 _groupId) external view returns ( uint256 ) {
+    return itemGroups[_groupId].mintCount;
   }
 
   /**
